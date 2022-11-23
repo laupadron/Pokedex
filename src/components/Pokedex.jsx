@@ -68,7 +68,7 @@ const Pokedex = () => {
    <>
     <p>Name</p>
     <input type="text" placeholder='search character' value={characterName} onChange={e=>setCharacterName(e.target.value)} />
-    <img src="src\assets\pokemon.png" alt="" onClick={searchCharacter} style={{width:"30px",eight:"30px"}} />
+    <i class="fa-brands fa-centercode" onClick={searchCharacter} style={{fontSize:"30px"}}></i>
    </>:
    <>
     <p>Type</p>

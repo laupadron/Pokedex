@@ -32,7 +32,7 @@ const InputPokemon = () => {
    <p>Enter your name to start the search</p>
    <form className="input-btn"> 
     <input type="text" onChange={e=>setNameUser(e.target.value)}value={nameUser}/>
-    <img src="src\assets\pokemon.png" onClick={nameValidation} alt="" style={{width:"50px",eight:"50px"}} />
+    <i class="fa-brands fa-centercode" onClick={nameValidation} style={{fontSize:"30px"}}></i>   
    </form>
    <div className="bubbles">
     <div className="bubble"></div>

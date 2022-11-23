@@ -74,6 +74,9 @@ text-shadow: 3px 4px 8px #FF4646;
   border: 1px solid black;
   
 }
+.fa-brands{
+ color:#FF4646
+}
 .input-btn input:hover {
  transform: scale(1.03);
  background-color: #FF4646;
@@ -81,7 +84,7 @@ text-shadow: 3px 4px 8px #FF4646;
  border: 1px solid #062226;
  text-align: center;
 }
-.input-btn img:hover{
+.fa-brands:hover{
  transform: scale(1.1);
  cursor: pointer;
  
