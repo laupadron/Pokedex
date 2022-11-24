@@ -5,12 +5,14 @@ import InputPokemon from './components/InputPokemon'
 import Pokedex from './components/Pokedex'
 import PokemonDetail from './components/PokemonDetail'
 import ProtectedRoutes from './components/ProtectedRoutes'
-
+import { Link } from 'react-router-dom';
 function App() {
   
 
   return (
    <HashRouter>
+    
+       
     <div className="App">
      <Routes>
       <Route path="/" element={<InputPokemon/>}/>

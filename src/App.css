@@ -23,6 +23,7 @@ body{
  text-align: center;
  width: 100%;
  height: 100vh;
+ margin-top: 50px;
  
 }
 /* estilos de ruta input */
@@ -89,8 +90,9 @@ text-shadow: 3px 4px 8px #FF4646;
  cursor: pointer;
  
 }
-.input-btn img{
+.input-btn i{
  margin-top: 20px;
+ margin-left: 8px;
 }
 .player{
  padding-bottom: 50px;
@@ -162,6 +164,50 @@ text-shadow: 3px 4px 8px #FF4646;
   animation-delay: 2s;
 }
 /* pokedex */
+.pokedex{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ height: 100vh;
+}
+.pokedex .fa-arrow-left{
+ font-size: 30px;
+ position: absolute;
+ left: 15px;
+}
+.pokedex h1{
+ text-shadow: 3px 4px 8px #FF4646;
+ padding-top: 20px;
+ margin-bottom: 0;
+}
+.pokedex .player{
+ position: fixed;
+ top:0;
+ left:900px;
+ z-index: 1;
+ opacity: 0.2;
+}
+.btn-pagination{
+ display: flex;
+ gap: 10px;
+}
+.btn-pagination button{
+ width: 100px;
+ height: 30px;
+ border-radius: 1rem;
+ background-color:#FF4646 ;
+}
+.prev:hover{
+ transform: scale(1.1);
+ cursor: pointer;
+ 
+}
+.next:hover{
+ transform: scale(1.1);
+ cursor: pointer;
+ 
+}
 .check-container{
  display: flex;
  justify-content: center;
@@ -216,11 +262,7 @@ text-shadow: 3px 4px 8px #FF4646;
  border: 1px solid #F37878;
  text-align: center;
 }
-.check-container img:hover{
- transform: scale(1.1);
- cursor: pointer;
- 
-}
+
 .check-container select{
  width: 45%;
  height: 25px;
@@ -238,20 +280,6 @@ text-shadow: 3px 4px 8px #FF4646;
  margin-right: 10px;
 }
 /* pokemon cards */
-.pokedex{
- display: flex;
- align-items: center;
- justify-content: center;
- flex-direction: column;
- height: 100vh;
-}
-.pokedex .player{
- position: fixed;
- top:0;
- left:900px;
- z-index: 1;
- opacity: 0.2;
-}
 
 .pagination-items{
 
@@ -271,6 +299,9 @@ gap: 10px;
 @media (max-width:480px){
  .pagination-items{
   grid-template-columns: repeat(2,1fr);
+ margin: 0 1rem 0 1rem;
+ padding: 0;
+ width: 100vw;
  }
 }
 .cards-container{
@@ -402,6 +433,7 @@ justify-self: center;
 .details-container{
  width: 70vw;
  height: 700px;
+ 
 }
 @media(max-width:480px){
  .details-container{
@@ -410,8 +442,9 @@ justify-self: center;
  }
 }
 .container-details img{
- width: 150px;
- height: 150px;
+ width: 120px;
+ height: 120px;
+ 
 }
 .principal{
  display: flex;
@@ -427,16 +460,43 @@ justify-self: center;
 }
 .sub-name{
  margin-bottom: 50px;
+ background-color: #F37878;
+ width: 200px;
+ border-radius: 1rem;
 }
 @media(max-width:480px){
  .sub-name{
   margin-bottom: 140px;
  }
 }
+.sub-principal2{
+ background-color: grey;
+ width: 100px;
+ border-radius: 1rem;
+}
+.sub-principal1{
+ background-color: grey;
+ width: 100px;
+ border-radius: 1rem;
+}
+
+.abilities{
+ 
+ width: 200px;
+ border-radius: 1rem;
+ height: 110px;
+}
+.type{
+ 
+ width: 200px;
+ border-radius: 1rem;
+ height: 110px;
+}
 .id-info{
  display: flex;
  justify-content: space-around;
  align-items: center;
+ margin: 10px 0 10px 0;
 }
 
 @keyframes animation1{
@@ -474,7 +534,7 @@ justify-self: center;
 
 .container-Bar{
 
-
+ border-radius: 1rem;
 display: flex;
 flex-direction: column;
 background-color: #F37878;
@@ -486,7 +546,7 @@ width: 70%;
  width: 100%;
  height: 30px;
  background-color:white ;
- 
+ border-radius: 1rem;
  opacity: 0.8;
  animation: animation 2s infinite alternate;
 }
@@ -495,7 +555,7 @@ width: 70%;
  width: 100%;
  height: 30px;
  background-color:white ;
- 
+ border-radius: 1rem;
  opacity: 0.8;
  animation: animation1 2s infinite alternate;
 }
@@ -503,7 +563,7 @@ width: 70%;
  width: 100%;
  height: 30px;
  background-color:white ;
- 
+ border-radius: 1rem;
  opacity: 0.8;
  animation: animation2 2s infinite alternate;
 }
@@ -511,7 +571,7 @@ width: 70%;
  width: 100%;
  height: 30px;
  background-color:white ;
- 
+ border-radius: 1rem;
  opacity: 0.8;
  animation: animation3 2s infinite alternate;
 }
@@ -520,8 +580,9 @@ width: 70%;
  grid-template-columns:  20% 80%;
  justify-content: center;
  align-items: center;
- margin-left: 0px;
+ margin-left: 70px;
  width: 80vw;
+ 
 }
 @media(max-width:480px){
  .general-progress{
@@ -547,6 +608,8 @@ overflow: hidden;
  margin-bottom: 0;
  width: 70vw;
  background-color: grey;
+ margin-bottom: 20px;
+
 }
 @media(max-width:480px){
  .evolution-picture{
@@ -563,10 +626,12 @@ overflow: hidden;
  margin-bottom: 0;
  width: 70vw;
  background-color: grey;
+ 
 }
 @media(max-width:480px){
  .evolution-container h2{
   width: 100%;
+  
  }
 }
 .evolution-container{

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import PokemonCards from './PokemonCards';
 import { Player } from '@lottiefiles/react-lottie-player';
 
@@ -52,6 +52,7 @@ const Pokedex = () => {
  return (
   
 <div className='pokedex'>
+   <Link to='/'><i class="fa-solid fa-arrow-left"></i></Link>
    <Player src='https://assets7.lottiefiles.com/temp/lf20_Tw0dyZ.json' 
    className='player'
    loop
@@ -68,7 +69,7 @@ const Pokedex = () => {
    <>
     <p>Name</p>
     <input type="text" placeholder='search character' value={characterName} onChange={e=>setCharacterName(e.target.value)} />
-    <i class="fa-brands fa-centercode" onClick={searchCharacter} style={{fontSize:"30px"}}></i>
+    <i class="fa-brands fa-centercode" onClick={searchCharacter} style={{fontSize:"25px",marginRight:"5px"}}></i>
    </>:
    <>
     <p>Type</p>
@@ -85,10 +86,10 @@ const Pokedex = () => {
   </div>
   <div className="btn-pagination">
     <button onClick={()=>setPagination(pagination-1)}
-    disabled={pagination===1} className='prev-next'
+    disabled={pagination===1} className='prev'
       >Prev Page</button>
     <button onClick={()=>setPagination(pagination+1)}
-    disabled={pagination===totalPages} className='prev-next'
+    disabled={pagination===totalPages} className='next'
     >Next Page</button>
    </div>
  <ul className='pagination-items'>

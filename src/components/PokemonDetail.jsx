@@ -4,6 +4,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Player } from '@lottiefiles/react-lottie-player';
+import { Link } from 'react-router-dom';
 
 const PokemonDetail = () => {
 const[character,setCharacter]=useState({});
@@ -15,7 +16,9 @@ axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
 },[])
 console.log(character)
  return (
+  
   <div className={`details-container ${character.types?.[0].type?.name}`}>
+   
    
    <img src={character.sprites?.other['home'].front_default} alt="" />
    <div className="principal">
@@ -33,14 +36,16 @@ console.log(character)
     </div>
    </div>
    <div className="id-info">
-    
-    <div className="abilities">
-     <p>Habilities</p>
+    <div className={`abilities ${character.types?.[0].type?.name}`}>
+     <p><b>Habilities</b> </p>
      <p>{character.abilities?.[0]?.ability.name} <br /> {character.abilities?.[1]?.ability.name}</p>
-     
+    </div>
+    <div className={`type ${character.types?.[0].type?.name}`}>
+     <p><b>Type</b> </p>
+     <p>{character.types?.[0].type?.name}</p> 
+      
     </div>
     
-    <p>Type <br /> {character.types?.[0].type?.name}</p>
    </div>
    <div className="general-progress">
     <div className='categorys' >

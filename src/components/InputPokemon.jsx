@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { changeName } from '../store/slices/name.slice';
 import { Player } from '@lottiefiles/react-lottie-player';
+
+
  
 
 const InputPokemon = () => {
@@ -17,11 +19,13 @@ const InputPokemon = () => {
   dispatch(changeName(nameUser));
   navigate("/pokedex");
  }
- return (
+ 
 
+ return (
   
   <div className='container-input'>
    
+    
    <h1>Hello Poketrainer!!!</h1>
    <Player src='https://assets6.lottiefiles.com/packages/lf20_mrg9xhbm.json' 
    className='player'
@@ -43,11 +47,15 @@ const InputPokemon = () => {
     <div className="bubble"></div>
    </div>
    
-   
+    
   </div>
- 
+  
+    
+  
+    
+   
  );
-};
+ }
 
 
 export default InputPokemon;

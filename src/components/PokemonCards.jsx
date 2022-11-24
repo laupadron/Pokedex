@@ -15,8 +15,9 @@ axios.get(url)
 
  return (
  <Link to={`/pokedex/${character.id}`}>
+  
   <div className={`cards-container ${character.types?.[0].type?.name}`}>
-   
+  
    
     <div className={`info-cards `}>
      <h3>{character.name}</h3>
